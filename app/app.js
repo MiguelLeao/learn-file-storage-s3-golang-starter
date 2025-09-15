@@ -261,7 +261,11 @@ function viewVideo(video) {
     thumbnailImg.style.display = 'none';
   } else {
     thumbnailImg.style.display = 'block';
-    thumbnailImg.src = video.thumbnail_url;
+    if (video.thumbnail_url.includes("?")){
+      thumbnailImg.src = `${video.thumbnail_url}&v=${Date.now()}`;
+    } else {
+      thumbnailImg.src = `${video.thumbnail_url}?v=${Date.now()}`;
+    }
   }
 
   const videoPlayer = document.getElementById('video-player');
