@@ -64,4 +64,4 @@ go run .
 - You should see a new `assets` directory created in the root directory, this is where the images will be stored.
 - You should see a link in your console to open the local web page.
 
-## 4. Conttributing
+## 4. Contributing
